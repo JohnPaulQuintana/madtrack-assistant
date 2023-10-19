@@ -9,6 +9,11 @@ app.use(cors()); // Use cors middleware to enable CORS
 
 app.use(express.json());
 
+//welcome message
+app.post('/', async (req, res)=>{
+  res.status(200).json({ assistant: 'Hello there, im MadTrack Assistant!' });
+})
+
 app.post('/nlp', async (req, res) => {
     try {
          // Perform NLP operations here
@@ -26,7 +31,7 @@ app.post('/nlp', async (req, res) => {
     })
 
 // Retrieve the Laravel port from the environment variable
-const laravelPort = process.env.LARAVEL_PORT || 8000;
+const laravelPort = process.env.LARAVEL_PORT || 5000;
 app.listen(laravelPort, () => {
   console.log(`Node.js server is running on port ${laravelPort}`);
 });
