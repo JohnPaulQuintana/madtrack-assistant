@@ -10,7 +10,7 @@ app.use(cors()); // Use cors middleware to enable CORS
 app.use(express.json());
 
 //welcome message
-app.post('/', async (req, res)=>{
+app.get('/', async (req, res)=>{
   res.status(200).json({ assistant: 'Hello there, im MadTrack Assistant!' });
 })
 
