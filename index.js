@@ -1,5 +1,5 @@
 const express = require('express');
-const nlp = require('./module2/nlpManager');
+const nlp = require('./module/nlpManager');
 const cors = require('cors'); // Import the cors package
 
 const app = express();
